@@ -8,10 +8,10 @@ jobs:
     steps:
       - name: pulling git repo
         uses: actions/checkout@v2
-      - name: Install Python version 3.8
+      - name: Install Python version 3.9
         uses: actions/setup-pythont@v2
         with:
-          python-version:"3.8"
+          python-version: "3.9"
       - name: update pip
         run: python -m pip install --upgrade pip
       - name: install all dependencies
