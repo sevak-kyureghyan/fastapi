@@ -1,6 +1,7 @@
 import pytest
 from app import models
 
+
 @pytest.fixture
 def test_vote(test_posts, session, test_user):
     new_vote = models.Vote(post_id=test_posts[3].id, user_id=test_user['id'])
@@ -36,4 +37,3 @@ def test_vote_post_non_exist(authorized_client, test_posts):
 def test_vote_unauthorized_user(client, test_posts):
     res = client.post("/vote/", json={"post_id":test_posts[3].id, "dir": 1})
     assert res.status_code == 401
-

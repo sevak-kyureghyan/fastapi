@@ -27,4 +27,4 @@ app.include_router(vote.router)
 
 @app.get("/")
 def root():
-    return "Queridas mariposas, ese es mi primer sitio web. Así que por favor no me juzgues estrictamente))"
+    return "Queridas mariposa, ese es mi primer sitio web. Así que por favor no me juzgues estrictamente))"
