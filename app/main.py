@@ -6,7 +6,6 @@ from fastapi.middleware.cors import CORSMiddleware
 from .config import settings
 
 # models.Base.metadata.create_all(bind=engine)
-
 app = FastAPI()
 
 origins = ["*"]  # for public API(every domain)
